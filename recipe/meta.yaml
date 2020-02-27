@@ -1,18 +1,18 @@
 {% set name = "jupyter-rsession-proxy" %}
-{% set version = "1.0b6" %}
+{% set version = "1.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6c2d6ab32cbb83c61383011f1793d3c8dfb45728876204599ef78db24eb240c7
+  sha256: 47fedffa51e613bb2ba1d10e1b0b90469db35315d3e9af3d41a4e7d4eb4e97c3
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
