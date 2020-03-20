@@ -24,6 +24,10 @@ requirements:
     - setuptools
 
 test:
+  requires:
+    - pip
+  commands:
+    - pip check
   imports:
     - jupyter_rsession_proxy
 
