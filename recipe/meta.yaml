@@ -12,14 +12,14 @@ source:
 build:
   number: 0
   noarch: python
-  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
+  script: '{{ PYTHON }} -m pip install .'
 
 requirements:
   host:
     - pip
     - python >=3
   run:
-    - jupyter-server-proxy
+    - jupyter-server-proxy >=3.1
     - python >=3
     - setuptools
 
