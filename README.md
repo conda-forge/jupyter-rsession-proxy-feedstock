@@ -1,11 +1,11 @@
-About jupyter-rsession-proxy
-============================
+About jupyter-rsession-proxy-feedstock
+======================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyter-rsession-proxy-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/jupyterhub/jupyter-rsession-proxy
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyter-rsession-proxy-feedstock/blob/main/LICENSE.txt)
 
 Summary: Jupyter extension to proxy RStudio's rsession
 
