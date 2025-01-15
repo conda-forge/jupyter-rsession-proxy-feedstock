@@ -17,15 +17,17 @@ build:
 requirements:
   host:
     - pip
-    - python >=3
+    - python {{ python_min }}
+    - setuptools
   run:
     - jupyter-server-proxy >=3.1
-    - python >=3
+    - python >={{ python_min }}
     - setuptools
 
 test:
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
   imports:
