@@ -1,13 +1,13 @@
 {% set name = "jupyter-rsession-proxy" %}
-{% set version = "2.2.1" %}
+{% set version = "2.3.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: dcec81020eac8c8b3ab58b26aee228db84a19d50b28b917e6022d3bb11b86152
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 826bc3678bcd7e815ff3592874c9599882c5a83da42381ddb9297a81601ac6c9
 
 build:
   number: 0
@@ -17,15 +17,17 @@ build:
 requirements:
   host:
     - pip
-    - python >=3
+    - python {{ python_min }}
+    - setuptools
   run:
     - jupyter-server-proxy >=3.1
-    - python >=3
+    - python >={{ python_min }}
     - setuptools
 
 test:
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
   imports:
